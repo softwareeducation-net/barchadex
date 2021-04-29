@@ -68,7 +68,7 @@ export default function TopBar() {
           }}
         >
         <h1 style={{ margin: '0 30px 0 30px' }}>
-        BARCHA TRADE
+        GLARE
       </h1>
 
 

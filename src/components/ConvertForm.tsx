@@ -96,7 +96,6 @@ export default function ConvertForm() {
   return (
   <>
       {!connected && (
-
         <Row justify="center">
           <Col>
             <WalletConnect />

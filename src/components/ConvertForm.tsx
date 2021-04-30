@@ -94,17 +94,18 @@ export default function ConvertForm() {
   };
 
   return (
-    <FloatingElement style={{ maxWidth: 500 }}>
-      <Title level={3}>Swap Tokens</Title>
+  <>
       {!connected && (
+
         <Row justify="center">
           <Col>
             <WalletConnect />
           </Col>
         </Row>
+
       )}
       {tokenConvertMap && connected && (
-        <>
+      <FloatingElement style={{ maxWidth: 500 }}>
           <Row style={{ marginBottom: 8 }}>
             <Col>
               <Select
@@ -156,9 +157,10 @@ export default function ConvertForm() {
               />
             </MarketProvider>
           )}
-        </>
+
+        </FloatingElement>
       )}
-    </FloatingElement>
+        </>
   );
 }
 

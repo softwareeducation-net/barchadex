@@ -1,5 +1,8 @@
 import React from 'react';
 import { Tabs } from 'antd';
+        import { Button, Col, Input, Row, Select, Typography } from 'antd';
+        import WalletConnect from '../components/WalletConnect';
+
 import {
   useWalletBalancesForAllMarkets,
 } from '../utils/markets';
@@ -30,18 +33,25 @@ export default function BalancesPage() {
 
   return (
     <>
-        <FloatingElement style={{ flex: 1, paddingTop: 10 }}>
+        {!connected && (
+        <Row justify="center">
+            <Col>
+                <WalletConnect />
+            </Col>
+        </Row>
+        )}
 
         { connected && location.pathname == '/balances' && (
+        <FloatingElement style={{ flex: 1, paddingTop: 10 }}>
 
                 <Tabs defaultActiveKey="walletBalances">
                   <TabPane tab="Wallet Balances" key="walletBalances">
                     <WalletBalancesTable walletBalances={data} />
                   </TabPane>
                 </Tabs>
-        )}
         </FloatingElement>
 
+        )}
         </>
   );
 }

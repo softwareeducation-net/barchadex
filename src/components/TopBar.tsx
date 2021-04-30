@@ -70,13 +70,11 @@ export default function TopBar() {
         <h1 style={{ margin: '0 30px 0 30px' }}>
         GLARE
       </h1>
-
-
-            <Menu.Item key="/balances" style={{ margin: '0 10px' }}>
-            BALANCES
-          </Menu.Item>
-        <Menu.Item key="/convert" style={{ margin: '0 10px' }}>
-        SWAP
+      <Menu.Item key="/convert" style={{ margin: '0 10px' }}>
+      SWAP
+    </Menu.Item>
+   <Menu.Item key="/balances" style={{ margin: '0 10px' }}>
+            BALANCE
         </Menu.Item>
 
 
